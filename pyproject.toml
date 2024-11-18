@@ -19,7 +19,11 @@ readme = "README.md"
 requires-python = ">=3.8"
 dependencies = [
     "ruamel.yaml",
+<<<<<<< HEAD
     "pint_pulsar>=1.1.1",
+=======
+    "pint_pulsar==1.0.1",
+>>>>>>> 760f230 (Fixing syntax error in pint_pulsar versioning by pinning the version at 1.0.1)
     "enterprise-pulsar>=3.3.2",
     "enterprise-extensions>=v2.4.1",
     "pytest",
