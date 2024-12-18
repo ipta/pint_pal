@@ -37,7 +37,7 @@ dependencies = [
     "notebook",
     "seaborn",
     "gitpython",
-    "laforge",
+    "la-forge",
     "arviz",
 ]
 classifiers = [
