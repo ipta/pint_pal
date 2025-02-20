@@ -387,14 +387,16 @@ def model_noise(
     if not using_wideband:
         outdir = base_op_dir + mo.PSR.value + "_nb/"
     else:
-        outdir = base_op_dir + mo.PSR.value + "_wb/"
-    os.makedirs(outdir, exist_ok=True)
-    if os.path.exists(outdir) and (run_noise_analysis) and (not resume):
-        log.info(
-            "A noise directory for pulsar {} already exists! Re-running noise modeling from scratch".format(
-                mo.PSR.value
-            )
+        outdir = base_op_dir + mo.PSR.value + '_wb/'
+
+    if os.path.exists(outdir) and run_noise_analysis and not resume:
+        log.warning(
+            f"A noise directory for pulsar {mo.PSR.value} already exists! "
+            "Please rename the existing directory or specify a new location with "
+            "base_op_dir. If you're trying to resume noise modeling, use "
+            "resume=True with the existing directory. Skipping noise analysis."
         )
+        return None
     elif os.path.exists(outdir) and (run_noise_analysis) and (resume):
         log.info(
             "A noise directory for pulsar {} already exists! Re-running noise modeling starting from previous chain".format(
