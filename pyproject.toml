@@ -33,9 +33,18 @@ dependencies = [
     "notebook",
     "seaborn",
     "gitpython",
+<<<<<<< HEAD
     "la-forge",
     "arviz",
     "fastshermanmorrison-pulsar",
+=======
+<<<<<<< HEAD
+    "la-forge",
+    "arviz",
+=======
+    "fastshermanmorrison-pulsar",
+>>>>>>> 8c63ad5 (Add fastshermanmorrison to requirements)
+>>>>>>> merge_pint_v1.1_fix
 ]
 classifiers = [
     "Programming Language :: Python :: 3",
