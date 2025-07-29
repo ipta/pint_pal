@@ -13,6 +13,7 @@ authors = [
   { name="Anne Archibald", email="anne.archibald@nanograv.org" },
   { name="Kevin Wilson", email="kevin.wilson@nanograv.org" },
   { name="Ross Jennings", email="ross.jennings@nanograv.org" },
+  { name="Jeremy Baier", email="jeremy.baier@nanograv.org"}
 ]
 description = "A long-lived repository for NANOGrav Pulsar Timing analysis work."
 readme = "README.md"
@@ -31,13 +32,18 @@ dependencies = [
     "pytest-xdist[psutil]>=2.3.0",
     "notebook",
     "seaborn",
-    "gitpython",
+    "la-forge",
+    "arviz",
+    "fastshermanmorrison-pulsar",
 ]
 classifiers = [
     "Programming Language :: Python :: 3",
     "License :: OSI Approved :: MIT License",
     "Operating System :: OS Independent",
 ]
+
+[tool.setuptools.package-data]
+pint_pal = ["defaults.yaml", "plot_settings.yaml"]
 
 [project.urls]
 "Homepage" = "https://github.com/nanograv/pint_pal"
